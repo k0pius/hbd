@@ -1,0 +1,143 @@
+/*----Universal Styles----*/
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  transition: background-image 1000ms ease-in;
+}
+
+.spotlight {
+background-image: repeating-radial-gradient(farthest-corner at 50% -500px,black 0%, white 100%);
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+-webkit-user-select: none; /* Chrome/Safari */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+ */
+}
+
+.container {
+  width: 75%;
+  height: auto;
+  bordr: 2px solid black;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+
+}
+
+span {
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Gloria Hallelujah', cursive;
+  position: relative;
+  color: black;
+  padding: 2rem 0 2rem 0;
+}
+
+.colors {
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+  }
+
+@keyframes hue {
+  0% {-webkit-filter: hue-rotate(0deg);}
+  100% {-webkit-filter: hue-rotate(-360deg);}
+}
+
+.options {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  padding: 1rem;
+  margin: 2rem;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  border-radius: 0.75rem;
+  transition: color 250ms ease-out, transform 100ms ease-in;
+}
+
+.btn:hover {
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+  color: white;
+  -webkit-animation: hue 0.8s infinite linear;
+}
+
+.btn:active {
+  transform: translateY(0.5rem);
+}
+
+.omg {
+  opacity: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-width: 65%;
+}
+
+.on {
+  opacity: 1;
+  transition: all 250ms ease-out;
+}
+
+.off {
+  display: none;
+}
+
+.heart {
+  width: 100%;
+  height: auto;
+  margin: 3rem 6rem;
+  position: inherit;
+  -webkit-animation: throb 2.3s ease-out infinite;
+}
+
+@keyframes throb {
+  50% {transform: scale(1.15);}
+}
+
+
+.animated {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.b {
+  width: 30%;
+  height: auto;
+}
+
+.banim {
+  animation: bsing 4s linear;
+}
+
+@keyframes bsing {
+  0% {transform: translate(100%, 0%);}
+  25% {transform: translate(75%, -7%);}
+  50% {transform: translate(50%, 0%);}
+  75% {transform: translate(25%, -12%);}
+  100% {transform: translate(0%, 0%);}
+}
